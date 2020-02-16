@@ -12,17 +12,18 @@
         </p>
         <p>
             <label> Conversion </label>
-            <input id ="celsius" type="number" placeholder="Celsius">
-        <p>
-            Fahrenheit
+            <input id ="inputCelsius" type="number" placeholder="Celsius"
+             oninput="convert(this.value)" onchange="convert(this.value)">
         </p>
-        <!--<script>
-            // formula: celsius * 9/5 (1.8) + 32
+        <p>
+            Fahrenheit <span id="outputFahrenheit"> </span>
+        </p>
+        <script>
             function convert(num) {
-                var multiply = num * (9/5);
-                var calculation = multiply + 32;
-                return calculation
+                document.getElementById("outputFahrenheit").innerHTML=
+                 (num * (9/5)) + 32;
             }
-        </script>-->
+        </script>
+
     </body>
 </html>
